@@ -10,8 +10,6 @@ name: Java CI with Gradle
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
 
 jobs:
   build:
@@ -25,6 +23,8 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
+    - name: permit Gradle
+      run: chmod +x gradlew
     - name: Build with Gradle
       uses: gradle/gradle-build-action@bc3340afc5e3cc44f2321809ac090d731c13c514
       with:
