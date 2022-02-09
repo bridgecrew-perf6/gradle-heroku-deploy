@@ -9,5 +9,6 @@ public class SampleTest {
         System.out.println("--------テスト開始------------");
         assertEquals(1,1);
         System.out.println("--------テスト終了------------");
+
     }
 }
